@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typescript RavePay</title>
+    <style type="text/css">
+        body {
+            font-size: 1em;
+            font-family: 'Tahoma', sans-serif;
+            text-align: center;
+        }
+        .paymentbtn {
+            color: #61DAFB;
+            width: 250px;
+            height: 50px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="raveInstance.pay(raveOtion)" class="paymentbtn">Pay me</button>
+</body>
+<script src="../dist/typescript-ravepayment.umd.js"></script>
+<script type="text/javascript">
+    var raveOtion =  {
+	    PBFPubKey: 'FLWPUBK-c59ee426f4c86db0eef5d6514cd2b187-X',
+	    txref: computeReference(),
+	    amount: 1000,
+	    customer_email: "nsegun5@gmail.com",
+	    callback,
+	    onclose
+    }
+
+    function computeReference () {
+	    let text = "";
+	    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	    for( let i=0; i < 10; i++ )
+		    text += possible.charAt(Math.floor(Math.random() * possible.length));
+	    return text;
+    }
+
+    function callback(response) {
+    	console.log(response)
+    }
+
+    function onclose() {
+	    console.log("close")
+    }
+
+    var raveInstance = typescriptRavepayment.Ravepay();
+</script>
+</html>

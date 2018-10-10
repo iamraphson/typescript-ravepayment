@@ -12,7 +12,7 @@
   "author": "Ayeni Olusegun <nsegun5@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/iamraphson/typescript-ravepayment.git"
   },
   "license": "MIT",
   "engines": {

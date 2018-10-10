@@ -1,7 +1,7 @@
 {
   "name": "typescript-ravepayment",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Typescript Libraray for rave payment",
   "keywords": [],
   "main": "dist/typescript-ravepayment.umd.js",
   "module": "dist/typescript-ravepayment.es5.js",
@@ -66,6 +66,7 @@
     "collectCoverage": true,
     "mapCoverage": true
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^22.0.0",
     "@types/node": "^9.3.0",
